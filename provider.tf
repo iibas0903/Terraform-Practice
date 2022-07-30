@@ -2,7 +2,13 @@ provider "aws" {
   region = "us-east-1"
 }
 
-
+terraform {
+  backend "s3" {
+    bucket = "ilknur-bucket-01"
+    key    = "ec2example/devops/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
 
 terraform {
   required_providers {
