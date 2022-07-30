@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "ilknur_s3" {
     }
   }
 
-versioning {
+  versioning {
     enabled = true
   }
 
