@@ -91,8 +91,11 @@ variable "instance_availability_zone" {
 }
 
 variable "instance_ami" {
-    default = "ami-0cff7528ff583bf9a"
-}
+   # type = map
+    default =  "ami-0cff7528ff583bf9a"
+      #  "us-east-1c" = "ami-0cff7528ff583bf9a"
+    }
+
 
 #variable "subnet_id" {
  #   default= ""
