@@ -7,6 +7,9 @@ terraform {
     bucket = "ilknur-bucket-01"
     key    = "ec2example/devops/terraform.tfstate"
     region = "us-east-1"
+    #dynamodb_table = "terraform-lock"
+    #encrypt = true 
+
   }
 }
 
