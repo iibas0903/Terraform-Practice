@@ -1,8 +1,8 @@
 resource "aws_instance" "web" {
-  ami                         = "ami-0cff7528ff583bf9a"
-  instance_type               = "t2.micro"
+  ami                         = var.instance_ami
+  instance_type               = var.instance_type
   associate_public_ip_address = true
-  availability_zone           = "us-east-1c"
-  key_name                    = "ilknur-keypair"
+  availability_zone           = var.instance_availability_zone
+  key_name                    = var.key_name
 
 }
