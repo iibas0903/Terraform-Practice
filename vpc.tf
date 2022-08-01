@@ -34,6 +34,10 @@ resource "aws_internet_gateway" "ilknur-gateway" {
 }
 
 
-  
+  resource "aws_network_interface" "ilknur-networkinterface" {
+  subnet_id       = aws_subnet.ilknur-subnet1.id
+  private_ips     = [var.private_ip]
+  security_groups = [aws_security_group.ilknur_allow_all.id]
+}
 
 

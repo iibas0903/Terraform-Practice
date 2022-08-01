@@ -126,5 +126,7 @@ variable "versioning_enabled" {
     default =  true
 }
 
-
+variable "private_ip" {
+    default = "10.0.1.202"
+}
 

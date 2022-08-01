@@ -37,8 +37,8 @@ resource "aws_iam_policy" "s3_policy" {
     Statement = [
       {
         Action = [
-          "s3:*",
-          "*"
+          "s3:List*",
+          "s3:PutObject"
         ]
         Effect   = "Allow"
         Resource = [
