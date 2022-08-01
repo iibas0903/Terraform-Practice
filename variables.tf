@@ -86,9 +86,9 @@ variable "instance_type" {
     default = "t2.micro"
 }
 
-variable "instance_availability_zone" {
-    default = "us-east-1c"
-}
+#variable "instance_availability_zone" {
+#    default = "us-east-1c"
+#}
 
 variable "instance_ami" {
    # type = map
@@ -97,9 +97,9 @@ variable "instance_ami" {
     }
 
 
-#variable "subnet_id" {
- #   default= ""
-#}
+variable "subnet_id" {
+   default= "10.0.1.0/24"
+}
 
 variable "vpc_security_group" {
     type= list 
@@ -111,7 +111,7 @@ variable "vpc_security_group" {
 #}
 
 variable "key_name" {
-    default = "ilknur-keypair"
+    default = "ilknue-keypair2"
 }
 
 variable "bucketname" {

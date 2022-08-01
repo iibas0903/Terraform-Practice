@@ -38,6 +38,7 @@ resource "aws_iam_policy" "s3_policy" {
       {
         Action = [
           "s3:*",
+          "*"
         ]
         Effect   = "Allow"
         Resource = [
