@@ -40,10 +40,10 @@ resource "aws_iam_policy" "s3_policy" {
           "s3:List*",
           "s3:PutObject"
         ]
-        Effect   = "Allow"
+        Effect = "Allow"
         Resource = [
-        "${aws_s3_bucket.ilknur_s3.arn}",
-         "${aws_s3_bucket.ilknur_s3.arn}/*"
+          "${aws_s3_bucket.ilknur_s3.arn}",
+          "${aws_s3_bucket.ilknur_s3.arn}/*"
         ]
       },
     ]
@@ -52,6 +52,6 @@ resource "aws_iam_policy" "s3_policy" {
 
 #will attach role to policy 
 resource "aws_iam_role_policy_attachment" "role-attach" {
-  role      = aws_iam_role.s3_role.name
+  role       = aws_iam_role.s3_role.name
   policy_arn = aws_iam_policy.s3_policy.arn
 }

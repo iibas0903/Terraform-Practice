@@ -1,5 +1,5 @@
 resource "aws_vpc" "ilknur-vpc" {
-  cidr_block       = var.vpc_cidr
+  cidr_block = var.vpc_cidr
 
   tags = {
     Name = "ilknur-vpc"
@@ -7,8 +7,8 @@ resource "aws_vpc" "ilknur-vpc" {
 }
 
 resource "aws_subnet" "ilknur-subnet1" {
-  vpc_id     = aws_vpc.ilknur-vpc.id
-  cidr_block = var.subnet_1_cidr
+  vpc_id            = aws_vpc.ilknur-vpc.id
+  cidr_block        = var.subnet_1_cidr
   availability_zone = var.zone_1
 
   tags = {
@@ -17,8 +17,8 @@ resource "aws_subnet" "ilknur-subnet1" {
 }
 
 resource "aws_subnet" "ilknur-subnet2" {
-  vpc_id     = aws_vpc.ilknur-vpc.id
-  cidr_block = var.subnet_2_cidr
+  vpc_id            = aws_vpc.ilknur-vpc.id
+  cidr_block        = var.subnet_2_cidr
   availability_zone = var.zone_2
   tags = {
     Name = "second subnet"
@@ -34,7 +34,7 @@ resource "aws_internet_gateway" "ilknur-gateway" {
 }
 
 
-  resource "aws_network_interface" "ilknur-networkinterface" {
+resource "aws_network_interface" "ilknur-networkinterface" {
   subnet_id       = aws_subnet.ilknur-subnet1.id
   private_ips     = [var.private_ip]
   security_groups = [aws_security_group.ilknur_allow_all.id]

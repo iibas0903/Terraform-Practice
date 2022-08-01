@@ -4,11 +4,11 @@ resource "aws_security_group" "ilknur_allow_all" {
   vpc_id      = aws_vpc.ilknur-vpc.id
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = var.sg_ingress_from_port
-    to_port          = var.sg_ingress_to_port
-    protocol         = var.ingress_protocol
-    cidr_blocks      = var.ingress_cidr_blocks
+    description = "TLS from VPC"
+    from_port   = var.sg_ingress_from_port
+    to_port     = var.sg_ingress_to_port
+    protocol    = var.ingress_protocol
+    cidr_blocks = var.ingress_cidr_blocks
     #ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
   }
 
