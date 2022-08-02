@@ -41,3 +41,5 @@ resource "aws_network_interface" "ilknur-networkinterface" {
 }
 
 
+
+
